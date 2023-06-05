@@ -1,16 +1,14 @@
-const seguentAcudit = () => {
-    fetch("https://icanhazdadjoke.com/", {
-            headers: {
-                Accept: "application/json"
-            }
-        })
-    
-    .then(response => response.json())
-    .then(data => {
-        const joke = data.joke;
-        document.getElementById("renderJoke").innerHTML=joke;
-    })
-    .catch(error => {
-        console.log(`Tenim l'error ${error} a l'hora de carregar l'acudit`);
-    });
+const seguentAcudit = async () => {
+    try {
+        const respuesta = await fetch("https://icanhazdadjoke.com/", {
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+        const data = await respuesta.json();
+        const acudit = data.joke;
+        document.getElementById("renderJoke").innerHTML=acudit;
+    } catch (error) {
+        document.getElementById("renderJoke").innerHTML=`Hem tingut el seguent error: ${error} obtenint l'acudit`;
+    }
 };
