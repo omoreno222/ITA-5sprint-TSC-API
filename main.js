@@ -36,11 +36,9 @@ const prevMeteo = async () => {
   } catch (err) {
     console.log(err.message);
   }
-  document.getElementsByClassName("tiempo").innerHTML = partMeteo;
-  console.log(partMeteo);
-  /* document.querySelector("#tiempo").innerHTML = partMeteo; */
+  console.log("la API del tiempo devuelve... ", partMeteo);
+  document.getElementById("meteo").innerHTML = partMeteo;
 };
-
 prevMeteo();
 
 const renderBtn = () => {
