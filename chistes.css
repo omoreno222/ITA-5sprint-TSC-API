@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+  height: 100vh;
+  width: auto;
+  font-size: 62.5%; /* 1rem = 10 px */
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+body {
+  background-image: url("img/fondoChistes2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.tiempo {
+  position: absolute;
+  top: 3rem;
+  left: 1rem;
+  color: black;
+  text-align: left;
+}
+
+.center {
+  width: auto;
+  margin-top: 20rem;
+  margin-left: 11rem;
+  margin-right: 11rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+#renderJoke {
+  margin-bottom: 2rem;
+}
+
+.btnJoke {
+  background-color: aqua;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: solid 1px aqua;
+  margin: 0 auto;
+}
+
+.valoracio {
+  display: none;
+  margin-bottom: 2rem;
+}
+
+.btnVal {
+  color: white;
+  background-color: grey;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  border: solid 1px grey;
+  margin: 0.2rem;
+}
