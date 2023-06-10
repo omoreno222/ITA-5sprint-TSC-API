@@ -1,5 +1,8 @@
 const reportAcudits = [];
 let acudit;
+const bcnLatitude = 41.390205;
+const bcnLongitude = 2.154007;
+let timeStamp = new Date().toISOString();
 
 const seguentAcudit = async () => {
   try {
@@ -21,6 +24,24 @@ const seguentAcudit = async () => {
 
   return acudit;
 };
+
+const prevMeteo = async () => {
+  let partMeteo;
+  try {
+    const respuesta = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=41.390205&lon=2.154007&appid=2497bea26c4a72174f8658d1d1c8479f&lang=CA`
+    );
+    const data = await respuesta.json();
+    partMeteo = data.weather[0].description;
+  } catch (err) {
+    console.log(err.message);
+  }
+  document.getElementsByClassName("tiempo").innerHTML = partMeteo;
+  console.log(partMeteo);
+  /* document.querySelector("#tiempo").innerHTML = partMeteo; */
+};
+
+prevMeteo();
 
 const renderBtn = () => {
   const btnJoke = document.querySelector(".btnJoke");

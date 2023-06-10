@@ -62,6 +62,12 @@ body {
   margin: 0 auto;
 }
 
+.btnJoke:hover {
+  background-color: blueviolet;
+  border: solid 1px blueviolet;
+  color: white;
+}
+
 .valoracio {
   display: none;
   margin-bottom: 2rem;
@@ -74,4 +80,8 @@ body {
   border-radius: 1rem;
   border: solid 1px grey;
   margin: 0.2rem;
+}
+
+.btnVal:hover {
+  background-color: black;
 }
