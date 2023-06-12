@@ -12,18 +12,21 @@ html {
 }
 
 h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
   font-size: 1.8rem;
 }
 
-body {
-  background-image: url("img/fondoChistes2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
+span {
+  font-size: 2rem;
+}
+
+.plafoTemps {
+  display: flex;
+  align-items: center;
+  justify-items: stretch;
 }
 
 .tiempo {
@@ -34,37 +37,79 @@ body {
   text-align: left;
 }
 
+.tacaPetita1 {
+  position: absolute;
+  top: 10rem;
+  right: 6rem;
+  height: 15rem;
+  width: 15rem;
+  background-image: url("img/blob2.svg");
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .center {
-  width: auto;
-  margin-top: 20rem;
-  margin-left: 11rem;
-  margin-right: 11rem;
-  padding: 2rem;
+  width: 70vw;
+  height: 100vh;
+  margin: 0 auto;
+  top: 45%;
+  left: 50%;
+  background-image: url("img/blob1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
   text-align: center;
-  background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
 }
 
+@media screen and (max-width: 1000px) {
+  .center {
+    background-size: 125%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .center {
+    background-size: 140%;
+  }
+}
+
+.tacaPetita2 {
+  position: absolute;
+  bottom: 10rem;
+  left: 6rem;
+  height: 20rem;
+  width: 20rem;
+  background-image: url("img/blob3.svg");
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 #renderJoke {
+  color: white;
+  margin: 0 auto;
+  width: 40%;
   margin-bottom: 2rem;
 }
 
 .btnJoke {
-  background-color: aqua;
+  background-color: orange;
   padding: 2rem;
-  border-radius: 1rem;
-  border: solid 1px aqua;
+  border-radius: 4rem;
+  border: solid 1.25px black;
   margin: 0 auto;
 }
 
 .btnJoke:hover {
-  background-color: blueviolet;
-  border: solid 1px blueviolet;
+  background-color: orangered;
+  border: solid 1px orangered;
   color: white;
 }
 
@@ -74,14 +119,15 @@ body {
 }
 
 .btnVal {
-  color: white;
-  background-color: grey;
-  padding: 0.8rem;
+  color: black;
+  background-color: orange;
+  padding: 2rem;
   border-radius: 1rem;
-  border: solid 1px grey;
+  border: solid 1px orange;
   margin: 0.2rem;
 }
 
 .btnVal:hover {
-  background-color: black;
+  background-color: orangered;
+  border-color: orangered;
 }

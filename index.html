@@ -11,20 +11,29 @@
 
 <body>
 
-    <p class="tiempo" id="meteo">[la previsió anirá aquí]</p>
+    <div class="plafoTemps">
+        <img src="" alt="icone temps" id="imgMeteo">
+        <span>|&nbsp;</span>
+        <span id="temper"></span>
+    </div>
+
+
+    <div class="tacaPetita1"></div>
 
     <div class="center">
         <h1>Preparat per riure? 🤣</h1>
         <p id="renderJoke">[aquí anirà l'acudit]</p>
 
         <div class="valoracio">
-            <button id="btnVal1" class="btnVal" onClick="execValoracio(1)">🙄 qué dolent!</button>
-            <button id=" btnVal2" class="btnVal" onClick="execValoracio(2)">😀 graciós!</button>
-            <button id=" btnVal3" class="btnVal" onClick="execValoracio(3)">😆 em tronxo!</button>
+            <button id="btnVal1" class="btnVal" onClick="execValoracio(1)">🙄</button>
+            <button id=" btnVal2" class="btnVal" onClick="execValoracio(2)">😀</button>
+            <button id=" btnVal3" class="btnVal" onClick="execValoracio(3)">😆</button>
         </div>
 
         <button class="btnJoke" onClick="seguentAcudit()">Següent acudit</button>
     </div>
+
+    <div class="tacaPetita2"></div>
 
     <script>"use strict;"</script>
     <script src="main.js"></script>

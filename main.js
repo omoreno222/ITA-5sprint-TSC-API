@@ -52,19 +52,26 @@ const seguentAcudit = () => {
 
 // bcnLatitude = 41.390205 - bcnLongitude = 2.154007;
 const prevMeteo = async () => {
-  let partMeteo;
+  let temperatura;
+  let imatgeMeteo;
 
   try {
     const respuesta = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=41.390205&lon=2.154007&appid=2497bea26c4a72174f8658d1d1c8479f&lang=CA`
+      `https://api.openweathermap.org/data/2.5/weather?lat=41.390205&lon=2.154007&appid=2497bea26c4a72174f8658d1d1c8479f&lang=CA&units=metric`
     );
     const data = await respuesta.json();
-    partMeteo = data.weather[0].description;
+
+    temperatura = data.main.temp;
+    imatgeMeteo = data.weather[0].icon;
   } catch (err) {
     console.log(err.message);
   }
-  console.log("API tiempo devuelve... ", partMeteo); // https://openweathermap.org/current#one
-  document.getElementById("meteo").innerHTML = partMeteo;
+  console.log("API tiempo imagen devuelve... ", imatgeMeteo);
+  console.log("API tiempo temperatura devuelve... ", temperatura);
+  document.getElementById(
+    "imgMeteo"
+  ).src = `http://openweathermap.org/img/w/${imatgeMeteo}.png`;
+  document.getElementById("temper").innerHTML = temperatura + " ºC";
 };
 prevMeteo();
 
